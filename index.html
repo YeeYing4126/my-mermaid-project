@@ -7,7 +7,7 @@
 </head>
 <body>
   <div class="game-container">
-    <img src="your-underwater-background.png" class="background" alt="Underwater Background" />
+    <img src="images/background.png" class="background" alt="Underwater Background" />
 
     <div class="status-bar">
       <div class="energy-label">Energy</div>
@@ -17,13 +17,17 @@
       <div class="energy-value">150 / 200</div>
     </div>
 
-    <div class="location surface-post">Surface Trading Post</div>
-    <div class="location coral-reef">Coral Reef</div>
-    <div class="location sunken-ship">Sunken Ship</div>
-    <div class="location home-cave">Home Cave</div>
+    <div class="location" id="surface" data-name="Surface Trading Post" style="top:15%;left:60%;" onclick="selectLocation('surface')">Surface Trading Post</div>
+    <div class="location" id="coral" data-name="Coral Reef" style="top:45%;right:25%;" onclick="selectLocation('coral')">Coral Reef</div>
+    <div class="location" id="ship" data-name="Sunken Ship" style="top:40%;left:20%;" onclick="selectLocation('ship')">Sunken Ship</div>
+    <div class="location" id="home" data-name="Home Cave" style="bottom:10%;left:30%;" onclick="selectLocation('home')">Home Cave</div>
 
     <div class="mermaid"></div>
 
+    <div class="info-card" id="info-card">
+      <h3>Route Plan</h3>
+      <ul id="route-list"></ul>
+    
     <div class="info-card">
       <h3>Surface Trading Post</h3>
       <p>Medicine x3</p>
@@ -31,7 +35,9 @@
     </div>
 
     <button class="validate-button">Validate Route</button>
-    <div class="energy-used">Total Energy Used: 185/200 | Missing: <span>Home Cave return!</span></div>
+    <div class="energy-used" id="energy-used">Total Energy Used: 0 / 200</div>
   </div>
+    
+   <script src="script.js"></script>
 </body>
 </html>
