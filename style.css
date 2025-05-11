@@ -109,3 +109,14 @@ body {
   color: white;
   font-size: 16px;
 }
+
+.location.selected {
+  background-color: rgba(0, 255, 255, 0.4);
+  border-color: yellow;
+}
+
+#route-list {
+  list-style: none;
+  padding-left: 0;
+}
+
